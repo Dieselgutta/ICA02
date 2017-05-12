@@ -1,8 +1,23 @@
 package algorithms
 
-// Les https://en.wikipedia.org/wiki/Bubble_sort
+// Deres kode her
 func Bubble_sort_modified(list []int) {
-	// Deres kode her
+	length := len(list)
+	for {
+		unsorted := true
+		for index := 0; index < length-1; index++ {
+			if list[index] > list[index+1] {
+				temp := list[index+1]
+				list[index+1] = list[index]
+				list[index] = temp
+				unsorted = false
+			}
+		}
+		length -= 1
+		if unsorted == true {
+			break
+		}
+	}
 }
 
 // Implementering av Bubble_sort algoritmen
