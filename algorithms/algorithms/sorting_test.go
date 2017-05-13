@@ -56,28 +56,12 @@ func BenchmarkBSortModified10000(b *testing.B) {
 	benchmarkBSortModified(10000, b)
 }
 
-func BenchmarkBSortModified100000(b *testing.B) {
-	benchmarkBSortModified(100000, b)
-}
-
 func benchmarkBSortModified(i int, b *testing.B) {
 	for j := 0; j < b.N; j++ {
 		b.StopTimer()
 		values := perm(i)
 		b.StartTimer()
 		Bubble_sort_modified(values)
-	}
-}
-
-// Implementasjon av testfunksjoner for Quicksort algoritmen
-func TestQSort(t *testing.T) {
-	values := []int{9, 1, 20, 3, 6, 7}
-	expected := []int{1, 3, 6, 7, 9, 20}
-
-	QSort(values)
-
-	if !reflect.DeepEqual(values, expected) {
-		t.Fatalf("expected %d, actual is %d", 1, values[0])
 	}
 }
 
@@ -99,5 +83,17 @@ func benchmarkQSort(i int, b *testing.B) {
 		values := perm(i)
 		b.StartTimer()
 		QSort(values)
+	}
+}
+
+// Implementasjon av testfunksjoner for Quicksort algoritmen
+func TestQSort(t *testing.T) {
+	values := []int{9, 1, 20, 3, 6, 7}
+	expected := []int{1, 3, 6, 7, 9, 20}
+
+	QSort(values)
+
+	if !reflect.DeepEqual(values, expected) {
+		t.Fatalf("expected %d, actual is %d", 1, values[0])
 	}
 }
