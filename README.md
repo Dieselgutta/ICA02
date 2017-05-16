@@ -45,7 +45,7 @@ En bedre måte å overføre på er gjennom SCP. SCP står for Secure Copy Protoc
 
 
 Her er et eksempel på hvordan man kan skrive det i ATOM. Dette er da int32. 
-![Bilde6](https://scontent-arn2-1.xx.fbcdn.net/v/t34.0-12/18555190_10158500578085411_274414608_n.png?oh=ca132452166d3f821532ed3e2ca60ff0&oe=591D0BEB]
+![Bilde6](https://scontent-arn2-1.xx.fbcdn.net/v/t34.0-12/18555190_10158500578085411_274414608_n.png?oh=ca132452166d3f821532ed3e2ca60ff0&oe=591D0BEB])
 
 
 Det vi har gjort her er at vi har laget tester som produserer feil. Det vi får som feilmelding på int32 er "constant 2147483648 overflows". Det vil da si at den er ikke innenfor int32 sin rekkevidde.
